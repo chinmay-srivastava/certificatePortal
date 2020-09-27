@@ -1,33 +1,80 @@
 .App {
   text-align: center;
+  align-items: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+#exampleEmail{
+padding: 10px;
+width: 80%;
+border-radius: 8px;
+border-width: 1px;
+border-color: gray;
+margin: 10px;
+margin-top: 10px;
+font-size: 15px;
+font-style: inherit;
+color: gray;
+align-content: center;
+}
+#exampleEmail Label{
+  color: white;
+}
+#exampleDrop{
+  padding: 10px;
+  width: 80%;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: gray;
+  margin: 10px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-style: inherit;
+  color: gray;
+  align-content: center;
+  }
+  #exampleDrop Label{
+    color: white;
+  }
 .App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(#f12711, #f5af19);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+  font-size: 2.5vw;
   color: white;
+  animation-name: example ;
+  animation-duration: 20s;
+  animation-iteration-count:infinite;
 }
 
 .App-link {
   color: #61dafb;
 }
-
+Button{
+  font-size: 30px;
+  margin: 50px;
+  padding: 15px;
+  border-radius: 30px;
+  border-width: 0px;
+  background-color: #3ce953;
+  color: white;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +82,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes example {
+  0%   {background-image: linear-gradient(45deg,#f12711, #f5af19);}
+  10%  { background-image: linear-gradient(90deg, #f12711, #f5af19);}
+  20%  { background-image: linear-gradient(135deg, #f12711, #f5af19);}
+  30% {background-image: linear-gradient(180deg,#f12711, #f5af19);}
+  40%   {background-image: linear-gradient(225deg, #f12711, #f5af19);}
+  50%  {background-image: linear-gradient(170deg,#f12711, #f5af19);}
+  60%  {background-image: linear-gradient(315deg,#f12711, #f5af19);}
+  70% {background-image: linear-gradient(360deg, #f12711, #f5af19);}
+  70% {background-image: linear-gradient(45deg,#f12711, #f5af19);}
+  70% {background-image: linear-gradient(90deg,#f12711, #f5af19);}
+  70% {background-image: linear-gradient(135deg, #f12711, #f5af19);}
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(16, 236, 101); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  margin-top: 5px;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .90s infinite ;
+   
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(16, 236, 101); }
 }
